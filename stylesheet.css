@@ -1,0 +1,201 @@
+body
+{
+	background-color: #ffffff;
+}
+.top{
+	text-align: center;
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	margin-top: 0px;
+	height: 100px;
+	background-color: #08306b;
+	border-radius: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.banner{
+
+	color: white;
+}
+#left_tabs {
+	position: relative;
+	float: left;
+	margin-top: 5px;
+	width: 8%;
+	background-color: #2171b5;
+	margin-bottom: 1px;
+	border-radius: 15px;
+
+}
+
+.mybutton{
+	display: block;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;	
+	background-color: #08306b;
+	color:white;
+	font-size: 18px;
+}
+
+#info{
+		position: relative;
+	float: right;
+	margin-top: 5px;
+	width: 90.5%;
+	background-color: #c6dbef;
+	margin-bottom: 10px;
+    font-family: verdana;
+    padding-left: 10px;
+	border-radius: 15px;
+	vertical-align:middle;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+
+.home{
+	
+	text-align: center;
+	margin-top: 40%;
+	border-radius: 5px;
+	height:30px;
+	padding-top: 0%;
+	padding-bottom: 0%
+
+}
+
+.home a{
+	text-decoration: none;
+	font-weight: bold;
+	height: 30px;
+}
+
+.home a:visited{
+	color: #ffffff;
+}
+
+.home a:link{
+color: #ffffff;	
+}
+
+.more_info{
+	
+	text-align: center;
+	border-radius: 5px;
+	height:30px;
+	padding-top: 0%;
+	padding-bottom: 0%
+
+}
+
+.more_info a{
+	text-decoration: none;
+	font-weight: bold;
+	height: 30px;
+}
+
+.more_info a:visited{
+	color: #ffffff;
+}
+
+.more_info a:link{
+color: #ffffff;	
+}
+
+.contact{
+	
+	text-align: center;
+	border-radius: 5px;
+	height:30px;
+	padding-top: 0%;
+	padding-bottom: 0%;
+
+}
+
+.contact a{
+	text-decoration: none;
+	font-weight: bold;
+	height: 30px;
+}
+
+.contact a:visited{
+	color: #ffffff;
+}
+
+.contact a:link{
+color: #ffffff;	
+}
+
+.logo
+{
+	
+	position: relative;
+	float: left;
+}
+
+#fb{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+#ln{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#pin{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+   
+
+}
+
+.height_home{
+	height: 650px;
+}
+.height_contact{
+	height: 650px;
+}
+.height_moreinfo{
+	height: 925px;
+}
+
+a{
+	text-decoration: none;
+}	
+
+a:visited{
+	color: #663366;
+}
+img{
+	display:block;
+	vertical-align: top;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table{
+	width: auto;
+	margin-bottom: 10px;
+
+}
+
+.texts{
+	font-size: 16px;
+	font-weight: bold;
+
+}
+
+#email a:hover{
+font-size: 18px;
+}

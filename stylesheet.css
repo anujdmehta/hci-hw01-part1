@@ -156,10 +156,30 @@ color: #ffffff;
 table, th, td {
     border: 1px solid black;
     text-align: center;
-   
-
+  
 }
 
+#radiotable
+{
+	border: none;
+	text-align: left;
+}
+
+ .radiorow
+ {
+border: none;
+	text-align: left;
+ }
+
+ #radiorow2
+ {
+
+ }
+
+ #radiorow3
+ {
+
+ }
 .height_home{
 	height: 750px;
 }

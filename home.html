@@ -3,12 +3,35 @@
 <head>
 <title>Home Page</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
+<style>
+	.state{
+		fill: none;
+		stroke: #a9a9a9;
+		stroke-width: 1;
+	}
+	.state:hover{
+		fill-opacity:0.5;
+	}
+	
+	path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+
+</style>
+
 </head>
 <body>
 	<div class="top">
 <h2 class="banner">Welcome to my personal website</h2>
 <h3 class="banner">Hi!! I'm Anuj Mehta. Interested in knowing me better? Continue Reading...</h3>
      </div>
+
+
 
 <div class="height_home" id="info">
 <img src="images/picture.png" />
@@ -64,12 +87,31 @@
   	<li>Exploring new places </li>
   	<li>Automobiles</li>
 
+<p>The map below describes the deaths due to guns across varoius locations in the USA</p>
+
+<form name="myForm">
+	<p>Select a Check Box to Check the Male and Female Deaths Frequency Maps. General Category is Selected Default</P>
+<table id="radiotable">
+    <tr><td  class="radiorow">General:</td> <td  class="radiorow"><input type="radio" name="myRadios" onclick="handleClick(this);" value="1" checked="checked"/></td></tr>
+    <tr><td class="radiorow">Male:</td> <td class="radiorow"> <input type="radio" name="myRadios" onclick="handleClick(this);" value="2" /></td></tr>
+    <tr><td  class="radiorow">Female:</td> <td class="radiorow"> <input type="radio" name="myRadios" onclick="handleClick(this);" value="3" /> </td></tr>
+</table>
+</form>
+
+
 </div>
+
 <div class="height_home" id="left_tabs">
 <p class="home" ><a href="home.html" class="mybutton">Home</a></p>
 <p class="contact" ><a href="contact.html"  class="mybutton">Contact me</a></p>
 <p class="more_info" ><a href="moreinfo.html"  class="mybutton">More about me</p>
 </div>
-</body>
 
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+<script src="deathmap.js"></script>
+
+</body>
 </html>

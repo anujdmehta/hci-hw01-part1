@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>More Information</title>
+
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="stylesheet.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+   <title>More Information</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 <div class="top">
 	<h2 class="banner">Some more information on what I like</h2>
+</div>
 
+<div id='cssmenu'>
+<ul>
+   <li ><a href="home.html"><span>Home</span></a></li>
+   <li><a href="contact.html"><span>Contact</span></a></li>
+   <li class='active'><a href="moreinfo.html"><span>Learn More</span></a></li>
+   <li class='last'><a href="d3vis.html"><span>D3 Visualisation</span></a></li>
+</ul>
 </div>
 
 <div class="height_moreinfo" id="info">
-
+<br/>
 <ol>
 <li class="texts">Books I Love:</li>
+<br/>
 
 <table class="t1">
 <thead>
@@ -51,8 +67,9 @@
 
 </tbody>
 </table>
-
+<br/>
 <li class="texts">Cars I'm Crazy About:</li>
+<br/>
 <table>
 <tbody>
 <tr>
@@ -64,13 +81,6 @@
 </table>
 </ol>
 </div>
-
-<div class="height_moreinfo" id="left_tabs">
-<p class="home"><a href="home.html" class="mybutton" >Home</a></p>
-<p class="contact"><a href="contact.html" class="mybutton" >Contact me</a></p>
-<p class="more_info"><a href="moreinfo.html" class="mybutton">More about me</p>
-</div>
-
 
 </body>
 </html>

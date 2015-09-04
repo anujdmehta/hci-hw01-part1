@@ -3,8 +3,8 @@ var kill_count = [];
 var kill_count_male=[];
 var kill_count_female=[];
 var death;
-var width = 1400,
-    height = 1100;
+var width = 1350,
+    height = 900;
 
 var projection = d3.geo.albersUsa()
     .scale(1700)
@@ -20,10 +20,25 @@ var svg = d3.select("body").append("svg")
 
 display_markers();
 
+  document.getElementById("selected_value").innerHTML = "General Classification of Gun Deaths Selected";
+
 function handleClick(myRadio) {
 	
  //   alert('New value: ' + myRadio.value);
     current_radio = myRadio.value;
+
+  if(current_radio == 1)
+  {
+          document.getElementById("selected_value").innerHTML = "General Classification of Gun Deaths Selected";
+   }else
+   if(current_radio==2)
+   { 
+            document.getElementById("selected_value").innerHTML = "Male Classification of Gun Deaths Selected ";
+    }
+    else
+    {
+          document.getElementById("selected_value").innerHTML = "Female Classification of Gun Deaths Selected";
+    }
    display_markers(); 
 }
 
@@ -37,7 +52,19 @@ d3.json("us.json", function(error, topology) {
   svg.selectAll("path")
       .data(topojson.feature(topology, topology.objects.states).features)
     .enter().append("path")
-      .attr("d", path);
+      .attr("d", path)
+      .on('mouseover', function(d, i) {
+
+                var currentState = this;
+                d3.select(this).style('fill-opacity', 1);
+                })
+                .on('mouseout', function(d, i) {
+
+                    d3.selectAll('path')
+                            .style({
+                                'fill-opacity':.7
+                            })
+                          });
 
 d3.csv("slategundeaths.csv", function(data)
 	{ 
@@ -169,7 +196,7 @@ svg.selectAll("circle.points")
 .enter().append("circle")
 .attr("transform", function(d){  return "translate(" + projection([d.lng, d.lat]) +")";})
 .attr("r",5)
-.style("fill","steelblue")
+.style("fill","#7f0000")
 .style("font-weight","bold")
 .append("svg:title")
 .text(function(d){ 
@@ -181,7 +208,7 @@ svg.selectAll("circle.points")
      	death = kill_count[i+1];
         }
       }
-	return ("City : "+d.city+ "\n"+"State : "+d.state+"\n"+"Gender Classification : "+"General"+"\n"+"Death Count: "+death)});
+	return ("City : "+d.city+ "\n"+"State : "+d.state+"\n"+"Gender Classification : "+"General"+"\n"+"Gun Deaths: "+death)});
 }
 else if (current_radio == 2)
 {
@@ -196,7 +223,7 @@ svg.selectAll("circle.points")
 .enter().append("circle")
 .attr("transform", function(d){  return "translate(" + projection([d.lng, d.lat]) +")";})
 .attr("r",5)
-.style("fill","red")
+.style("fill","#225ea8")
 .style("font-weight","bold")
 .append("svg:title")
 .text(function(d){ 
@@ -208,7 +235,7 @@ svg.selectAll("circle.points")
      	death = kill_count_male[i+1];
         }
       }
-	return ("City : "+d.city+ "\n"+"State : "+d.state+"\n"+"Gender Classification : "+"Male"+"\n"+"Death Count: "+death)});
+	return ("City : "+d.city+ "\n"+"State : "+d.state+"\n"+"Gender Classification : "+"Male"+"\n"+"Gun Deaths: "+death)});
 
 
 }
@@ -224,7 +251,7 @@ svg.selectAll("circle.points")
 .enter().append("circle")
 .attr("transform", function(d){  return "translate(" + projection([d.lng, d.lat]) +")";})
 .attr("r",5)
-.style("fill","black")
+.style("fill","#dd3497")
 .style("font-weight","bold")
 .append("svg:title")
 .text(function(d){ 
@@ -236,7 +263,7 @@ svg.selectAll("circle.points")
      	death = kill_count_female[i+1];
         }
       }
-	return ("City : "+d.city+ "\n"+"State : "+d.state+"\n"+"Gender Classification : "+"Female"+"\n"+"Death Count: "+death)});
+	return ("City : "+d.city+ "\n"+"State : "+d.state+"\n"+"Gender Classification : "+"Female"+"\n"+"Gun Deaths: "+death)});
 
 }
 

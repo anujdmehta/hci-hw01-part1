@@ -1,33 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  font-family: Georgia, Capriola, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+#cssmenu {
+  width: 100%;
+  height: 59px;
+  padding-bottom: 3px;
+  border-radius: 10px;
+}
+#cssmenu.align-right {
+  float: right;
+}
+#cssmenu.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+  border-bottom-right-radius: 10px;
+}
+#cssmenu #bg-one,
+#cssmenu #bg-two,
+#cssmenu #bg-three,
+#cssmenu #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#cssmenu #bg-one {
+  height: 10px;
+  background: #0f71ba;
+  border-bottom-left-radius: 10px;
+}
+#cssmenu #bg-two {
+  height: 59px;
+  z-index: 2;
+  background: url('images/bg.png');
+}
+#cssmenu #bg-three {
+  bottom: 4px;
+  height: 55px;
+  z-index: 3;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#cssmenu #bg-four {
+  bottom: 4px;
+  height: 55px;
+  z-index: 4;
+  background: url('images/bg.png');
+}
+#cssmenu ul {
+  height: 59px;
+}
+#cssmenu ul li {
+  float: left;
+  margin-right: 4px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 5;
+}
+#cssmenu ul li a {
+  padding: 24px 30px 20px 30px;
+  margin-bottom: 4px;
+  border-top-left-radius: 10px;
+  border-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #eeeeee;
+  font-size: 15px;
+  text-decoration: none;
+}
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+  border-bottom-left-radius: 10px;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  background: #0f71ba;
+  background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+  background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+  background: url('images/bg.png');
+  color: #ffffff;
+}
+
 body
 {
-	background-color: #ffffff;
+	background-color: #eeefff;
 }
 .top{
 	text-align: center;
-	z-index: 1;
+	z-index: -1;
 	position: relative;
 	width: 100%;
 	margin-top: 0px;
 	height: 100px;
-	background-color: #08306b;
-	border-radius: 15px;
+	background-color: #2c8ad2;
+	border-radius: 10px;
+	margin-bottom: 3px;
 	display: inline-block;
+	font-family: Georgia, Capriola, Helvetica, sans-serif;
+	font-weight: bold;
 	vertical-align: middle;
 }
 
 .banner{
 
 	color: white;
-}
-#left_tabs {
-	position: relative;
-	float: left;
-	margin-top: 5px;
-	width: 8%;
-	background-color: #2171b5;
-	margin-bottom: 1px;
-	border-radius: 15px;
-
 }
 
 .mybutton{
@@ -42,12 +149,13 @@ body
 
 #info{
 		position: relative;
-	float: right;
+	float: middle;
 	margin-top: 5px;
-	width: 90.5%;
-	background-color: #c6dbef;
+	width: 90%;
+	background-color: #eeefff;
 	margin-bottom: 10px;
-    font-family: verdana;
+    font-family: Georgia, Capriola, Helvetica, sans-serif;
+    font-size: 16px;
     padding-left: 10px;
 	border-radius: 15px;
 	vertical-align:middle;
@@ -156,6 +264,7 @@ color: #ffffff;
 table, th, td {
     border: 1px solid black;
     text-align: center;
+    width: auto;
   
 }
 
@@ -167,21 +276,12 @@ table, th, td {
 
  .radiorow
  {
-border: none;
+	border: none;
 	text-align: left;
  }
 
- #radiorow2
- {
-
- }
-
- #radiorow3
- {
-
- }
 .height_home{
-	height: 750px;
+	height: 50px;
 }
 .height_contact{
 	height: 650px;
@@ -218,4 +318,23 @@ table{
 
 #email a:hover{
 font-size: 18px;
+}
+
+#remove{
+	font-size: 24px;
+	color: #f03b20;
+}
+
+div.panel,p.flip {
+	margin: 0px;
+	padding: 5px;
+	text-align: center;
+	background: #ddd;
+	border: solid 1px #fff;
+}
+ 
+div.panel {
+	widht: 50%;
+	height: 100px;
+	display: none;
 }

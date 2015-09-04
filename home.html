@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript" src="jqeffects.js"></script>
 <title>Home Page</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
@@ -13,29 +20,36 @@
 	}
 	.state:hover{
 		fill-opacity:0.5;
-	}
+			}
 	
 	path {
-  fill: #ccc;
+  fill: #a7a7a7;
   stroke: #fff;
   stroke-width: .5px;
 }
-
 
 </style>
 
 </head>
 <body>
+
+
 	<div class="top">
 <h2 class="banner">Welcome to my personal website</h2>
 <h3 class="banner">Hi!! I'm Anuj Mehta. Interested in knowing me better? Continue Reading...</h3>
      </div>
 
+<div id='cssmenu'>
+<ul>
+   <li class='active'><a href="home.html"><span>Home</span></a></li>
+   <li><a href="contact.html"><span>Contact</span></a></li>
+   <li><a href="moreinfo.html"><span>Learn More</span></a></li>
+   <li class='last'><a href="d3vis.html"><span>D3 Visualisation</span></a></li>
+</ul>
+</div>
 
-
-<div class="height_home" id="info">
-<img src="images/picture.png" />
-
+<div id="info">
+<img src="images/picture.png" /><br/>
 <p>I live in <strong>Chicago</strong> (aka.The Windy City). Chicago has been my home for a year now and I'm in love with the city!!.</p>
 
 <p> I'm currently a masters student at UIC pursuing my masters in Computer Science. Technology has been part of me since a long time now, making me passionate about various aspects of the stream. I love working on new technologies at the<strong> <a href="https://www.evl.uic.edu/" target="_blank" 	>Electonic and Visualisation Laboratory</strong></a>.</p>
@@ -78,40 +92,29 @@
 </tr>
 </tbody>
 </table>
-
-
-<p>In addition, I love </p>
+<br/>
+<br/>
+ 
+ <p class="flip">Want to know about things that interest me?</p>
+	<div class="panel">
   <ul>
   	<li>Swimming</li> 
   	<li>Travelling </li>
-  	<li>Exploring new places </li>
   	<li>Automobiles</li>
+	</div>
+	
+ <br>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(".flip").click(function() {
+			$(".panel").slideToggle("slow");
+		});
+	});
+</script>
+<br/>
 
-<p>The map below describes the deaths due to guns across varoius locations in the USA</p>
-
-<form name="myForm">
-	<p>Select a Check Box to Check the Male and Female Deaths Frequency Maps. General Category is Selected Default</P>
-<table id="radiotable">
-    <tr><td  class="radiorow">General:</td> <td  class="radiorow"><input type="radio" name="myRadios" onclick="handleClick(this);" value="1" checked="checked"/></td></tr>
-    <tr><td class="radiorow">Male:</td> <td class="radiorow"> <input type="radio" name="myRadios" onclick="handleClick(this);" value="2" /></td></tr>
-    <tr><td  class="radiorow">Female:</td> <td class="radiorow"> <input type="radio" name="myRadios" onclick="handleClick(this);" value="3" /> </td></tr>
-</table>
-</form>
-
-
-</div>
-
-<div class="height_home" id="left_tabs">
-<p class="home" ><a href="home.html" class="mybutton">Home</a></p>
-<p class="contact" ><a href="contact.html"  class="mybutton">Contact me</a></p>
-<p class="more_info" ><a href="moreinfo.html"  class="mybutton">More about me</p>
-</div>
-
-
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
-<script src="deathmap.js"></script>
+<h4 id="remove"> Please click the button below to hide/show this line. </h4>
+<button id="toggle">Hide/Show (JQuery Effect)</button>
 
 </body>
 </html>
